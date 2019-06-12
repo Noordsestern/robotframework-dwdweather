@@ -20,7 +20,7 @@ setup(name='robotframework-dwdweather',
           "Operating System :: OS Independent"
       ],
       install_requires=[
-          'robotframework >= 3.1.0',
+          'robotframework >= 3.1.0,<3.2',
           'dwdweather2 >= 0.8.2'
       ],
       packages=['DwdWeatherLibrary'],
