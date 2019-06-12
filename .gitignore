@@ -1,0 +1,7 @@
+/**/__pycache__
+
+/libdoc
+/log
+/logs
+
+*.code-workspace
