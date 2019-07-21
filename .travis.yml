@@ -7,6 +7,7 @@ jobs:
     - stage: unittest
       if: branch != master
       install: skip # no unit tests yet
+      script: true
     - stage: acceptance tests
       if: branch != master
       install: pip install .
