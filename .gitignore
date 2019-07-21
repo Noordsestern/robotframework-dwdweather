@@ -4,4 +4,6 @@
 /log
 /logs
 
+/virtualenv
+
 *.code-workspace
