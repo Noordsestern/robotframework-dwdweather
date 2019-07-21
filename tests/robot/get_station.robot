@@ -1,5 +1,6 @@
 *** Settings ***
 Library     DwdWeatherLibrary
+Force Tags    acceptance_test
 
 *** Test Cases ***
 'Get station' should return a station for valid locations
