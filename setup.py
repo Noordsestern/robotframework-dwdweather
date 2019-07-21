@@ -21,7 +21,7 @@ setup(name='robotframework-dwdweather',
       ],
       install_requires=[
           'robotframework >= 3.1.0,<3.2',
-          'dwdweather2 >= 0.8.2'
+          'dwdweather2 >= 0.9.0'
       ],
       packages=['DwdWeatherLibrary'],
 )
