@@ -5,7 +5,9 @@
 
 # Installation
 ## robotframework-dwdweather
-Clone this repository and run `pip install .`
+Clone this repository. Run `pip install .` on following branch:
+- `master`: latest stable version
+- `staging` : edge version
 
 # Usage
 You can find example testcase in `tests/robot`
