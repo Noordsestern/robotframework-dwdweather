@@ -4,7 +4,7 @@ python:
 script: pip install .
 
 jobs:
-  include
+  include:
     - stage: unittest
       if: branch != master
       install: skip # no unit tests yet
