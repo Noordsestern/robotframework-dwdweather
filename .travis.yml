@@ -1,7 +1,14 @@
 language: python
 python:
   - "3.6"
-install:
-  - pip install .
-script:
-- "python -m robot -d ./logs tests/robot/*.robot"
+script: pip install .
+
+jobs:
+  include
+    - stage: unittest
+      if: branch != master
+      install: skip # no unit tests yet
+    - stage: acceptance tests
+      if: branch != master
+      install: pip install .
+      script: python -m robot -d ./logs tests/robot/*.robot
