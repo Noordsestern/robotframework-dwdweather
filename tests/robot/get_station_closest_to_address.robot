@@ -7,7 +7,8 @@ Test title
     Am Anger 33, 33332 Gütersloh    Nordrhein-Westfalen
     Harsewinkel    Nordrhein-Westfalen
     64807 Dieburg    Hessen
-    Sundsvall   Västernorrland
+    Ulm    Baden-Württemberg
+    Mainz    Rheinland-Pfalz
 
 
 *** Keywords ***
