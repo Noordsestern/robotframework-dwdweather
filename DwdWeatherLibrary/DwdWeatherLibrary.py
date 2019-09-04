@@ -38,7 +38,9 @@ class DwdWeatherLibrary(object):
         stations = [s.copy() for s in all_stations if station_name == s['name']]
         if 2 <= len(stations):
             logger.warn(f'Got more than one station for ${station_name}:\t${stations}')
-        return stations
+        if stations:
+            return stations[0]
+        return None
 
     @keyword(name="Get station closest to address")
     def get_nearest_station(self, address : str):
