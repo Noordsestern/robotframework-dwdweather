@@ -40,7 +40,7 @@ class DwdWeatherLibrary(object):
             logger.warn(f'Got more than one station for ${station_name}:\t${stations}')
         if stations:
             return stations[0]
-        return None
+        return []
 
     @keyword(name="Get station closest to address")
     def get_nearest_station(self, address : str):

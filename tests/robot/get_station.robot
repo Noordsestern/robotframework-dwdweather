@@ -24,9 +24,7 @@ Force Tags    acceptance_test
     [Arguments]    ${location}
     ${station}    Get station    ${location}
     Should Not Be Empty    ${station}    Could not retrieve station for ${location}
-    Should Be Equal    ${location}    ${station}[0][name]    Failed to retrieve correct station
-    ${number_of_stations}    Get Length    ${station}
-    Should Be Equal As Numbers    1    ${number_of_stations}    Expected exactly 1 station for ${location} but got ${number_of_stations}
+    Should Be Equal    ${location}    ${station}[name]    Failed to retrieve correct station
 
 'Get station' should return no value
     [Arguments]    ${location}
