@@ -5,7 +5,7 @@
 
 # Installation
 ## robotframework-dwdweather
-Clone this repository. Run `pip install .` on following branch:
+You can install python projects directly from git with pip by calling `pip install git+https://github.com/Noordsestern/robotframework-dwdweather.git@<branch_name>` where you have to set `<branch_name>` with one of the following:
 - `master`: latest stable version
 - `staging` : edge version
 
