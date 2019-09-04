@@ -65,3 +65,7 @@ class DwdWeatherLibrary(object):
         location = self._GEOLOCATOR.geocode(address)
         closest_station = self._DW_CLIENT.nearest_station(location.longitude, location.latitude)
         return closest_station
+
+    @keyword(name="Get current temperature")
+    def get_current_temperature_from_address(self, address: str):
+        return []
