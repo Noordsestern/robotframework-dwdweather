@@ -5,6 +5,7 @@ Force Tags    acceptance_test
 *** Test Cases ***
 Test 'Get current temperature from station' for address
     [Template]    Execute 'Get current temperature from station'
+    Köln-Bonn
     33332 Gütersloh
     Aachen
     Berlin
@@ -12,7 +13,5 @@ Test 'Get current temperature from station' for address
 *** Keywords ***
 Execute 'Get current temperature from station'
     [Arguments]    ${address}
-    ${station}    Get station closest to address    ${address}
-    should not be empty    ${station}    No station found for address:\t${address}
-    ${current_temperature}    Get current temperature    ${station}
-    Should Not Be Empty    ${current_temperature}    No temperature found for station:\t${station}[name]
+    ${current_temperature}    Get current temperature    ${address}
+    Should Not Be Empty    ${current_temperature}    No temperature found for station:\t${address}

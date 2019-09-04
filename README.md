@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/Noordsestern/robotframework-dwdweather.svg?branch=staging)](https://travis-ci.org/Noordsestern/robotframework-dwdweather)
 
 # Summary
-[Robot Framework](https://github.com/robotframework/robotframework) library for public weather service in Germany. Wraps original python implementation from [dwdweather2](https://github.com/hiveeyes/dwdweather2).
+[Robot Framework](https://github.com/robotframework/robotframework) library for public weather service in Germany ([DWD](https://www.dwd.de/DE/leistungen/opendata/faqs_opendata.html)). Wraps original python implementation from [dwdweather2](https://github.com/hiveeyes/dwdweather2).
 
 # Installation
 ## robotframework-dwdweather

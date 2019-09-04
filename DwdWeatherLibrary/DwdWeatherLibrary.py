@@ -2,9 +2,10 @@ from dwdweather import DwdWeather
 from robot.api import logger
 from robot.api.deco import keyword
 from geopy.geocoders import Nominatim
+import datetime
 
 
-class DwdWeatherLibrary(object):
+class DevKeyword(object):
     ROBOT_LIBRARY_VERSION = '0.0.1'
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
 
@@ -12,7 +13,7 @@ class DwdWeatherLibrary(object):
     _GEOLOCATOR = Nominatim(user_agent="robotframework-dwdweather")
 
     def __init__(self):
-        self._DW_CLIENT = DwdWeather('hourly')
+        self._DW_CLIENT = DwdWeather(resolution='hourly',category_names=["air_temperature"])
         logger.debug('Intialized DwdWeather')
 
     @keyword(name="Get all stations")
@@ -68,4 +69,14 @@ class DwdWeatherLibrary(object):
 
     @keyword(name="Get current temperature")
     def get_current_temperature_from_address(self, address: str):
-        return []
+        station : dict = self.get_nearest_station(address)
+        if not station:
+            raise Exception(f'Could not find station for address {address}')
+        station_id = station.get('station_id')
+        if not station_id:
+            raise Exception(f'Station has no id:\t${station}')
+        self._DW_CLIENT.import_measures(station_id)
+        temperature = self._DW_CLIENT.query(station_id, datetime.datetime.now())
+        if None == temperature:
+            return []
+        return temperature
